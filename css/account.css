@@ -1,0 +1,120 @@
+/*
+
+ACCOUNT
+
+*/
+
+#content_Account{
+    width: 600px;
+    height: auto;
+    position: realtive;
+    margin: 50px 0 0 calc(50% - 300px);
+    z-index: 0;
+    margin-bottom: 30px;
+}
+
+    #content_Account .element_Account{
+        box-shadow: .2px .2px 2px #000000;
+        position: relative;
+        width: 600px;
+        height: auto;
+        position: realtive;
+        margin: 0 0 20px calc(50% - 300px);
+        z-index: 0;
+        margin-bottom: 30px;
+        background-color: white;
+    }
+
+        #content_Account .element_Account .header{
+            width: 100%;
+            height: 40px;
+            background-color: #FDCE6D;
+        }
+
+            #content_Account .element_Account .header h1{
+                text-align: center;
+                font-family: 'Roboto Slab';
+                font-size: 20px;
+                padding-top: 5px;
+                font-weight: 400;
+                color: white;
+            }
+
+                #content_Account .element_Account .header h1 i{
+                   margin-right: 10px;
+                }
+
+                #content_Account .element_Account .chart{
+                   width: 100%;
+                   height: 200px;
+                   background-color: #7DC6B9;
+                }
+
+    #content_Account .element_Account ul{
+        margin:0px 0 0 0;
+        padding: 0;
+    }
+
+        #content_Account .element_Account ul li{
+            list-style-type: none;
+            width: 100%;
+            padding: 5px 0;
+            border-bottom: 1px solid #F2F2F2;
+        }
+
+            #content_Account .element_Account ul li i{
+                float: left;
+                padding: 7px 8px 7px 8px;
+                margin: 20px 0 0 15px;
+                border-radius: 50%;
+                color: white;
+            }
+
+                #content_Account .element_Account ul li i.expense{
+                    background-color: #ED6E62;
+                }
+
+                #content_Account .element_Account ul li i.income{
+                    background-color: #7DC6B9;
+                }
+
+             #content_Account .element_Account ul li h6{
+                display: block;
+                font-family: 'Roboto Slab';
+                color: #303030;
+                font-size: 14px;
+                font-weight: 400;
+                margin: 20px 0 0 50px;
+                    
+            }
+
+            #content_Account .element_Account ul li .date{
+                display: block;
+                font-family: 'Roboto Slab';
+                color: #303030;
+                font-size: 12px;
+                font-weight: 200;
+                margin: 0px 0 10px 50px;
+            }
+
+            #content_Account .element_Account ul li .tarif{
+                float: right;
+                font-family: 'Roboto Slab';
+                color: #303030;
+                font-size: 16px;
+                font-weight: 700;
+                margin: -45px 15px 0 0;
+            }
+
+                #content_Account .element_Account ul li .tarif.expense{
+                    color: #ED6E62;
+                }
+
+                #content_Account .element_Account ul li .tarif.income{
+                    color: #7DC6B9;
+                }
+
+
+
+
+

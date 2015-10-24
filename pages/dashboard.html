@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/icon.png"> <!-- FAVICON -->
+
+    <title>Alfred @ Work</title>
+
+    <!-- CSS -->
+    <link href="../css/general.css" rel="stylesheet">
+    <link href="../css/todolist.css" rel="stylesheet">
+    <link href="../css/planning.css" rel="stylesheet">
+    <link href="../css/team.css" rel="stylesheet">
+    <link href="../css/account.css" rel="stylesheet">
+  </head>
+  <body>
+
+  <!-- LEFT PANNEL -->
+
+    <div id="left_Pannel">
+    <img id="alfred_logo" src="../img/alfred.svg" />
+      <h1>Alfred @ Work</h1>
+      <span class="border"></span>
+      <ul>
+        <li class="active" onclick="mission_List(0);" >Dashboard</li>
+        <li onclick="mission_List(1);">Mission Logotype</li>
+        <li onclick="mission_List(2);">Mission Website</li>
+        <li><input id="input_Mission" onBlur="clear_input_mission();" onKeyPress="if(event.keyCode == 13) save_input_mission()" type="text" placeholder="+ Add a Mission" /></li>
+      </ul>
+    </div>
+
+    <!--TOP PANNEL -->
+
+    <div id="top_Pannel">
+      <h1>Dashboard</h1>
+      <ul>
+        <li class="active" onclick="tool_List(0);" >Todo-list</li>
+        <li onclick="tool_List(1);" >Planning</li>
+        <li onclick="tool_List(2);" >Team</li>
+        <li style="color:#B2B2B2;" >Account</li>
+      </ul>
+    </div>
+
+    <!-- TOOLTYPE -->
+
+    <div onclick="display_tooltype_Task();" id="button_Float" >
+      <p>+</p>
+    </div>
+    <span id="tooltype">
+      <input id="input_Name" type="text" placeholder="Name" /><br />
+      <input id="input_Date" onKeyPress="if(event.keyCode == 13) Add_Task()" type="date" placeholder="Date (JJ/MM/YYYY)" />
+      <div id="tooltype_priority"><h5>Priority</h5>
+        <i onclick="priority_tooltype(0);" class="icon">&#xf259;</i>
+        <i onclick="priority_tooltype(1);" class="icon">&#xf25b;</i>
+        <i onclick="priority_tooltype(2);" class="icon">&#xf25a;</i>
+        <i onclick="priority_tooltype(3);" class="icon active">&#xf255;</i></div>
+      <br />
+      <button onclick="Add_Task();" class="input_button active">Send</button>
+      <button onclick="display_tooltype_Task();" class="input_button">Cancel</button>
+    </span>
+
+    <div id="content">
+
+      <!-- CONTENT ACCOUNT -->
+      <div id="content_Account">
+        <div class="element_Account">
+          <div class="header">
+            <h1><i class="icon">&#xf0d6;</i>Septembre 2015</h1>
+          </div>
+          <canvas class="chart"></canvas>
+          <ul>
+            <li>
+              <i class="icon expense">&#xf072;</i>
+              <h6>Label de la dépense :-(</h6>
+              <p class="date">16/07/1992</p>
+              <p class="tarif expense">-12€</p>
+            </li>
+            <li>
+              <i class="icon expense">&#xf0f5;</i>
+              <h6>Label de la dépense :-(</h6>
+              <p class="date">16/07/1992</p>
+              <p class="tarif expense">-142.5€</p>
+            </li>
+            <li>
+              <i class="icon income">&#xf0f1;</i>
+              <h6>Label de l'entrée :-)</h6>
+              <p class="date">16/07/1992</p>
+              <p class="tarif income">+1226.32€</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CONTENT TEAM -->
+      <div id="content_Team">
+        <div class="element_user">
+          <div class="header VeryFree">
+            <img src="../img/UsrPict_Sim.svg">
+            <button><i class="icon">&#xf040;</i></button>
+          </div>
+          <ul>
+            <li><i class="icon">&#xf007;</i>Nicol Alexandre</li>
+            <li><i class="icon">&#xf121;</i>UI/UX Designer</li>
+            <li><i class="icon">&#xf0e0;</i>alexandre.nicol@outlook.com</li>
+          </ul>
+        </div>
+
+        <div class="element_user">
+          <div class="header VeryFree">
+            <img src="../img/UsrPict_Bat.svg">
+            <button><i class="icon">&#xf040;</i></button>
+          </div>
+          <ul>
+            <li><i class="icon">&#xf007;</i>Nicol Alexandre</li>
+            <li><i class="icon">&#xf121;</i>UI/UX Designer</li>
+            <li><i class="icon">&#xf0e0;</i>alexandre.nicol@outlook.com</li>
+          </ul>
+        </div>
+
+        <div class="element_user">
+          <div class="header Free">
+            <img src="../img/UsrPict_Tor.svg">
+            <button><i class="icon">&#xf040;</i></button>
+          </div>
+          <ul>
+            <li><i class="icon">&#xf007;</i>Nicol Alexandre</li>
+            <li><i class="icon">&#xf121;</i>UI/UX Designer</li>
+            <li><i class="icon">&#xf0e0;</i>alexandre.nicol@outlook.com</li>
+          </ul>
+        </div>
+
+        <div class="element_user">
+          <div class="header Busy">
+            <img src="../img/UsrPict_Mar.svg">
+            <button><i class="icon">&#xf040;</i></button>
+          </div>
+          <ul>
+            <li><i class="icon">&#xf007;</i>Nicol Alexandre</li>
+            <li><i class="icon">&#xf121;</i>UI/UX Designer</li>
+            <li><i class="icon">&#xf0e0;</i>alexandre.nicol@outlook.com</li>
+          </ul>
+        </div>
+
+        <div class="element_user">
+          <div class="header Busy">
+            <img src="../img/UsrPict_Ulk.svg">
+            <button><i class="icon">&#xf040;</i></button>
+          </div>
+          <ul>
+            <li><i class="icon">&#xf007;</i>Nicol Alexandre</li>
+            <li><i class="icon">&#xf121;</i>UI/UX Designer</li>
+            <li><i class="icon">&#xf0e0;</i>alexandre.nicol@outlook.com</li>
+          </ul>
+        </div>
+
+        <div class="element_user">
+          <div class="header VeryBusy">
+            <img src="../img/UsrPict_Kik.svg">
+            <button><i class="icon">&#xf040;</i></button>
+          </div>
+          <ul>
+            <li><i class="icon">&#xf007;</i>Nicol Alexandre</li>
+            <li><i class="icon">&#xf121;</i>UI/UX Designer</li>
+            <li><i class="icon">&#xf0e0;</i>alexandre.nicol@outlook.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CONTENT PLANNING -->
+      <div id="content_Planning">
+        <div class="content_element_Planning">
+          <div class="header">
+            <h1>Mission Logotype</h1>
+          </div>
+          <div class="left_Pannel">
+            <ul class="element_Planning">
+              <li><p>Task 1</p> <span></span></li>
+              <li><p>Task 2</p> <span></span></li>
+              <li><p>Task 3</p> <span></span></li>
+              <li><p>Task 4</p> <span></span></li>
+              <li><p>Task 5</p> <span></span></li>
+              <li><p>Task 6</p> <span></span></li>
+            </ul>
+          </div>
+          <div class="content">
+              <div class="month_content">
+                <span class="months">Novembre</span>
+                <span class="border"></span>
+              </div>
+              <div class="month_content">
+                <span class="months">December</span>
+                <span class="border"></span>
+              </div>
+              <div class="month_content">
+                <span class="months">January</span>
+                <span class="border"></span>
+              </div>
+              <div class="month_content">
+                <span class="months">February</span>
+                <span class="border"></span>
+              </div>            
+          </div>
+        </div>
+        <div class="content_element_Planning">
+          <div class="header">
+            <h1>Mission Website</h1>
+          </div>
+          <div class="left_Pannel">
+            <ul class="element_Planning">
+              <li><p>Task 1</p> <span></span></li>
+              <li><p>Task 2</p> <span></span></li>
+              <li><p>Task 3</p> <span></span></li>
+              <li><p>Task 4</p> <span></span></li>
+              <li><p>Task 5</p> <span></span></li>
+            </ul>
+          </div>
+          <div class="content">
+              <div class="month_content">
+                <span class="months">Novembre</span>
+                <span class="border"></span>
+              </div>
+              <div class="month_content">
+                <span class="months">December</span>
+                <span class="border"></span>
+              </div>
+              <div class="month_content">
+                <span class="months">January</span>
+                <span class="border"></span>
+              </div>
+              <div class="month_content">
+                <span class="months">February</span>
+                <span class="border"></span>
+              </div>            
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTENT TODOLIST -->
+      <div id="content_Todolist">
+
+        <div id="element_issue">
+          <h1><i class="icon">&#xf188;</i>Issues</h1>
+          <ul>
+            <li>
+              <span>1</span>
+              <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+              <p>Description de L’issue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </li> 
+           <li>
+              <span>2</span>
+              <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+              <p>Description de L’issue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div id="element_todolist">
+          <h1><i class="icon">&#xf00b;</i>Todo-List</h1>
+          <div class="list_Today">
+          <h3 onclick="toogle_today_task();"><i class="icon">&#xf0d7;</i>Today</h3>
+          <ul>
+            <li><i onclick="today_task_done(0);" class="icon">&#xf05d;</i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="date">Today</span></li>
+            <li><i onclick="today_task_done(1);" class="icon">&#xf05d;</i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="date">Today</span></li>
+            <li><i onclick="today_task_done(2);" class="icon">&#xf05d;</i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="date">Today</span></li>
+          </ul>
+          </div>
+  
+          <div class="list_Upcomming">
+          <h3 onclick="toogle_upcomming_task();"><i class="icon">&#xf0d7;</i>Upcomming</h3>
+          <ul>
+            <li><i onclick="upcomming_task_done(0);" class="icon">&#xf05d;</i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="date">Today</span></li>
+            <li><i onclick="upcomming_task_done(1);" class="icon">&#xf05d;</i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="date">Today</span></li>
+            <li><i onclick="upcomming_task_done(2);" class="icon">&#xf05d;</i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="date">Today</span></li>
+          </ul>
+          </div>
+  
+          <div class="list_Later">
+          <h3 onclick="toogle_later_task();"><i class="icon active">&#xf0d7;</i>Later</h3>
+          <ul>
+            <li><i onclick="later_task_done(0);" class="icon">&#xf05d;</i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="date">Today</span></li>
+            <li><i onclick="later_task_done(1);" class="icon">&#xf05d;</i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="date">Today</span></li>
+            <li><i onclick="later_task_done(2);" class="icon">&#xf05d;</i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="date">Today</span></li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Script -->
+    <script src="../js/jQuery.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src="../js/appdashboard.js"></script>
+  </body>
+  </html>

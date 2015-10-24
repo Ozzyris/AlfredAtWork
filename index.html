@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon.png"> <!-- FAVICON -->
+    <title>Labs</title>
+
+    <!-- CSS -->
+    <link href="css/app.css" rel="stylesheet">
+  </head>
+  <body>
+  	<button class="button" onclick="display_tooltype();">Connexion</button>
+  	<span id="tooltype">
+  		<input id="password" onKeyPress="if(event.keyCode == 13) Send_password()" type="password" placeholder="password" />
+  		<br />
+  		<button onclick="Send_password();" class="input_button active">Send</button>
+  		<button onclick="display_tooltype();" class="input_button">Cancel</button>
+  	</span>
+
+    <img id="background_img"  src="img/intro_Background.svg"> 
+
+  	<h1>We Kinda busy right know ...</h1>
+
+    <!-- Script -->
+    <script src="js/jQuery.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,117 @@
+/*
+
+PLANNING
+
+*/
+
+#content_Planning{
+    width: 600px;
+    height: auto;
+    position: realtive;
+    margin: 50px 0 0 calc(50% - 300px);
+    z-index: 0;
+    margin-bottom: 30px;
+}
+
+    .content_element_Planning{
+        box-shadow: .2px .2px 2px #000000;
+        position: relative;
+        width: 600px;
+        height: 300px;
+        position: realtive;
+        margin: 0 0 20px calc(50% - 300px);
+        z-index: 0;
+        margin-bottom: 30px;
+        background-color: white;
+    }
+
+        .content_element_Planning .header{
+            width: 100%;
+            height: 40px;
+            background-color: #FDCE6D;
+        }
+
+            .content_element_Planning .header h1{
+                text-align: center;
+                font-family: 'Roboto Slab';
+                font-size: 20px;
+                padding-top: 5px;
+                font-weight: 400;
+                color: white;
+            }
+
+        .content_element_Planning .left_Pannel{
+            position: absolute;
+            top: 40px;
+            left:0;
+            bottom: 0;
+            width: 120px;
+            background-color: #F1F1F1;
+        }
+
+        .content_element_Planning .content{
+            position: relative;
+            margin: 0 0 0 120px; 
+            bottom: 0;
+            right: 0;
+        }
+
+
+        .content_element_Planning .month_content{
+            float: left;
+            display: block;
+            width: 120px;
+            height: 260px;
+        }
+
+            .content_element_Planning .month_content .months{
+                display: block;
+                text-align: center;
+                font-family: 'Roboto Slab';
+                font-weight: 400;
+                font-size: 13px;
+                color: #666666;
+                padding-top: 10px;
+            }
+
+            .content_element_Planning .month_content .border{
+                float: left;
+                display: inline-block;
+                width: 1.5px;
+                height: 200px;
+                background-color: #BCBBBB;
+                vertical-align: middle;
+                margin: 15px 0 0 59.25px;
+            }
+
+        .left_Pannel .element_Planning{
+            margin:50px 0 0 0;
+            padding:0;
+            width: 600px;
+        }
+
+            .left_Pannel .element_Planning li{
+                list-style-type: none;
+                position: relative;
+                width: 100%;
+                height:20px;
+                padding-bottom: 5px;
+            }
+
+                .left_Pannel .element_Planning li p{
+                    font-family: 'Roboto Slab';
+                    font-weight: 400;
+                    font-size: 13px;
+                    color: #303030;
+                    margin:0 0 0 7px; 
+                    width: 120px;
+                }
+
+                .left_Pannel .element_Planning li span{
+                    position: absolute;
+                    top: 0; left: 120px;
+                    display: block;
+                    width: 480px;
+                    height: 20px;
+                    background-color: #FDCE6D;
+                }
