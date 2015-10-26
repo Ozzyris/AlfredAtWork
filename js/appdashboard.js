@@ -1,3 +1,13 @@
+/*
+
+Global Variable
+
+*/
+var onglet_tool = 0; //Needs for adapt the + Button
+
+
+
+
 function mission_List(id){
 	$('#left_Pannel ul').find('li').removeClass('active');
 	$('#left_Pannel ul li:eq(' + id + ')').addClass('active');
@@ -8,6 +18,7 @@ function mission_List(id){
 }
 
 function tool_List(id){
+	onglet_tool = id;
 	$('#top_Pannel ul').find('li').removeClass('active');
 	$('#top_Pannel ul li:eq(' + id + ')').addClass('active');
 
@@ -33,9 +44,27 @@ function tool_List(id){
 
 function display_tooltype_Task(){
 	$("#button_Float").toggleClass("active");
-	$('#tooltype').toggle();
-	$('#input_Name').val('');
-	$('#input_Date').val('');
+	console.log(onglet_tool);
+	switch(onglet_tool) {
+    	case 0:
+    	    $('#tooltype_TodoList').toggle();
+			$('#tooltype_TodoList #input_Name').val('');
+			$('#tooltype_TodoList #input_Date').val('');
+    	    break;
+    	case 1:
+    	    $('#tooltype_TodoList').toggle();
+			$('#tooltype_TodoList #input_Name').val('');
+			$('#tooltype_TodoList #input_Date').val('');
+    	    break;
+    	case 2:
+    		$('#tooltype_Team').toggle();
+			$('#tooltype_Team #input_Name').val('');
+    	    break;
+    	case 3:
+    		$('#tooltype_Account').toggle();
+			$('#tooltype_Account #input_Name').val('');
+    	    break;
+	}
 }
 
 function priority_tooltype(id){
@@ -43,6 +72,12 @@ function priority_tooltype(id){
 	$('#tooltype_priority i:eq(' + id + ')').addClass('active');
 }
 
+function type_OfMoneyEntree(id){
+	$('#tooltype_Account #buttons').find('button').removeClass('active');
+	$('#tooltype_Account #buttons button:eq(' + id + ')').addClass('active');
+
+	$('#tooltype_Account ul li i').toggleClass("expense income");
+}
 
 /*
 
@@ -113,3 +148,9 @@ function later_task_done(id){
 }
 
 
+
+/*
+
+Planning JS
+
+*/

@@ -40,6 +40,10 @@ PLANNING
                 color: white;
             }
 
+                .content_element_Planning .header h1 i{
+                    margin-right: 10px;
+                }
+                
         .content_element_Planning .left_Pannel{
             position: absolute;
             top: 40px;

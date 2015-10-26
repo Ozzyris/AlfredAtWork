@@ -38,7 +38,7 @@
         <li class="active" onclick="tool_List(0);" >Todo-list</li>
         <li onclick="tool_List(1);" >Planning</li>
         <li onclick="tool_List(2);" >Team</li>
-        <li style="color:#B2B2B2;" >Account</li>
+        <li onclick="tool_List(3);" style="color:#B2B2B2;" >Account</li>
       </ul>
     </div>
 
@@ -47,7 +47,8 @@
     <div onclick="display_tooltype_Task();" id="button_Float" >
       <p>+</p>
     </div>
-    <span id="tooltype">
+
+    <span id="tooltype_TodoList" class="popover">
       <input id="input_Name" type="text" placeholder="Name" /><br />
       <input id="input_Date" onKeyPress="if(event.keyCode == 13) Add_Task()" type="date" placeholder="Date (JJ/MM/YYYY)" />
       <div id="tooltype_priority"><h5>Priority</h5>
@@ -60,6 +61,33 @@
       <button onclick="display_tooltype_Task();" class="input_button">Cancel</button>
     </span>
 
+    <span id="tooltype_Team" class="popover">
+      <input id="input_Name" type="text" placeholder="Email" /><br />
+      <button onclick="Add_Task();" class="input_button active">Send</button>
+      <button onclick="display_tooltype_Task();" class="input_button">Cancel</button>
+    </span>
+
+    <span id="tooltype_Account" class="popover">
+      <input id="input_Name" type="text" placeholder="€ 15" /><br />
+      <div id="buttons">
+          <button onclick="type_OfMoneyEntree(0);" class="btn_type">Expense</button>
+          <button onclick="type_OfMoneyEntree(1);" class="btn_type active">Income</button>
+      </div>
+      <ul>
+        <li><i class="icon expense">&#xf072;</i></li>
+        <li><i class="icon expense">&#xf0f5;</i></li>
+        <li><i class="icon expense">&#xf007;</i></li>
+        <li><i class="icon expense">&#xf0d6;</i></li>
+        <li><i class="icon expense">&#xf015;</i></li>
+        <li><i class="icon expense">&#xf0f2;</i></li>
+        <li><i class="icon expense">&#xf0f1;</i></li>
+        <li><i class="icon expense">&#xf239;</i></li>
+        <li><i class="icon expense">&#xf084;</i></li>
+      </ul>
+      <button onclick="Add_Task();" class="input_button active">Send</button>
+      <button onclick="display_tooltype_Task();" class="input_button">Cancel</button>
+    </span>
+
     <div id="content">
 
       <!-- CONTENT ACCOUNT -->
@@ -68,7 +96,7 @@
           <div class="header">
             <h1><i class="icon">&#xf0d6;</i>Septembre 2015</h1>
           </div>
-          <canvas class="chart"></canvas>
+          <canvas class="chart" width="600" height="200" id="myChart"></canvas>
           <ul>
             <li>
               <i class="icon expense">&#xf072;</i>
@@ -171,7 +199,7 @@
       <div id="content_Planning">
         <div class="content_element_Planning">
           <div class="header">
-            <h1>Mission Logotype</h1>
+            <h1><i class="icon">&#xf0ce;</i>Mission Logotype</h1>
           </div>
           <div class="left_Pannel">
             <ul class="element_Planning">
@@ -204,7 +232,7 @@
         </div>
         <div class="content_element_Planning">
           <div class="header">
-            <h1>Mission Website</h1>
+            <h1><i class="icon">&#xf0ce;</i>Mission Website</h1>
           </div>
           <div class="left_Pannel">
             <ul class="element_Planning">
@@ -291,6 +319,7 @@
     <!-- Script -->
     <script src="../js/jQuery.js"></script>
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <!--<script src="../js/chart.js"></script>-->
     <script src="../js/appdashboard.js"></script>
   </body>
   </html>

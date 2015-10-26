@@ -262,8 +262,10 @@ TOOLTYPE
     transform: rotate(45deg);
 }
 
-#tooltype{
-    display:none;
+
+
+.popover{
+    display: none;
     position: fixed;
     right: 20px;
     top: 162px;
@@ -272,72 +274,80 @@ TOOLTYPE
     box-shadow: 2px 2px 5px #000000;
 }
 
-#tooltype input{
-    font-family: 'Roboto Slab';
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 0px;
-    margin: 4px 0px 5px 0px;
-    height: 30px;
-    line-height: 3;
-    border-width: medium medium 1px;
-    border-style: none none solid;
-    border-color: -moz-use-text-color -moz-use-text-color rgba(0, 0, 0, 0.12);
-    -moz-border-top-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    border-image: none;
-    outline: medium none;
-    color: rgba(0, 0, 0, 0.87);
-    font-size: 16px;
-    vertical-align: top;
-    transition: border 0.56s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-}
+    .popover:after{
+      content: "";
+      position: absolute;
+      z-index: 1000;
+      top: -7px;
+      left: 81%;
+      margin-left: -8px;
+      border-top: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #FFFFFF;
+    }
 
-#input_Date{
-    margin-bottom: 8px !important;
-}
+    .popover input{
+        font-family: 'Roboto Slab';
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 0px;
+        margin: 4px 0px 5px 0px;
+        height: 30px;
+        line-height: 3;
+        border-width: medium medium 1px;
+        border-style: none none solid;
+        border-color: -moz-use-text-color -moz-use-text-color rgba(0, 0, 0, 0.12);
+        -moz-border-top-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        border-image: none;
+        outline: medium none;
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 16px;
+        vertical-align: top;
+        transition: border 0.56s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    }
 
-#tooltype:after{
-  content: "";
-  position: absolute;
-  z-index: 1000;
-  top: -7px;
-  left: 81%;
-  margin-left: -8px;
-  border-top: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #FFFFFF;
-}
+        .popover input:last-child{
+            margin-bottom: 8px !important;
+        }
 
-#tooltype input:focus{
-    border-bottom: 1px solid #2196F3;
-}
+        .popover input:focus{
+            border-bottom: 1px solid #2196F3;
+        }
+        
+        .popover input.wrong{
+            border-bottom: 1px solid indianred;
+        }
 
-#tooltype input.wrong{
-    border-bottom: 1px solid indianred;
-}
+        .popover .input_button{
+            float: right;
+            padding: 3px 6px;
+            margin: 0 5px;
+            color: #2196F3;
+            border: none;
+            font-family: 'Roboto Slab';
+            font-size: 14px;
+            font-weight: 400;
+            background-color: #FFFFFF;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        .popover .input_button.active{
+            background-color: #2196F3;
+            color: #FFFFFF;
+        }
 
-#tooltype .input_button{
-    float: right;
-    padding: 3px 6px;
-    margin: 0 5px;
-    color: #2196F3;
-    border: none;
-    font-family: 'Roboto Slab';
-    font-size: 14px;
-    font-weight: 400;
-    background-color: #FFFFFF;
-    border-radius: 3px;
-    cursor: pointer;
-}
 
-#tooltype .input_button.active{
-    background-color: #2196F3;
-    color: #FFFFFF;
-}
+/*
+
+TOOLTYPE TODOLIST
+
+*/
+
 
     #tooltype_priority{
         height: 30px;
@@ -382,3 +392,89 @@ TOOLTYPE
         #tooltype_priority i:first-child{
             margin: 6px 0 0 0;
         }
+
+/*
+
+TOOLTYPE TEAM
+
+*/
+
+    #tooltype_Team input:last-child{
+        margin-bottom: 24px !important;
+    }
+
+/*
+
+TOOLTYPE Account
+
+*/
+
+    #tooltype_Account{
+        padding: 0 0 20px 0;
+    }
+
+    #tooltype_Account #input_Name{
+        width: 100%;
+        padding: 10px 20px 10px 20px;
+        margin: 0;
+        background-color: #FDCE6D;
+        height: 55px;
+        color: #FFFFFF;
+        text-align: right;
+        font-weight: 700;
+        float: right;
+        position: relative;
+    }
+
+     #tooltype_Account:after{
+      border-bottom: 8px solid #FDCE6D;
+     }
+
+     #tooltype_Account #buttons{
+        width: 100%;
+        padding: 36px 0px 10px 0px;
+        height: 30px;
+     }
+
+        #tooltype_Account #buttons button{
+            background-color: white; 
+            color: #FDCE6D;
+            border: 2px solid #FDCE6D;
+            border-radius: 3px;
+            padding: 2px 8px;
+            margin: 8px 0 0 29px;
+            cursor: pointer;
+        }
+
+        #tooltype_Account #buttons button.active{
+            background-color: #FDCE6D; 
+            color: white;
+        }
+
+    #tooltype_Account ul{
+        margin: 0;
+        padding: 5px 0;
+        width: 225px;
+        height: 75px;
+    }   
+
+        #tooltype_Account ul li{
+            float: left;
+            list-style-type: none;
+            margin: 10px 7px;
+            max-width: 20px;
+            max-height: 20px;
+            cursor: pointer;
+        }
+
+            #tooltype_Account ul li i{            
+                color: white;
+                padding: 7px;
+                border-radius: 50%;
+                max-width: 20px;
+                max-height: 20px;
+            }
+
+                #tooltype_Account ul li i.expense{background-color: #ED6E62;}
+                #tooltype_Account ul li i.income{background-color: #7DC6B9;}
+
