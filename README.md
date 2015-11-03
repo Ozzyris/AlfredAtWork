@@ -10,20 +10,26 @@ Alfred @ Work is the professional side of Alfred @ Home, He helps you manage you
   - [ ] To connect the front end with the firebase Back-End.
   - [ ] Create a dashboard to have a general overview of every project.
 
--------------
-### Todo List
+Todo List
+-------
   Basic todolist management, with add and complete feature, prioritization and timeline organization.
 
--------------
-### Planning
+Planning
+-------
   From the task and their ending date we manage a planning for the project.
 
--------------
-### Team
+Team
+-------
   For each project, the team who working on and their assignation.
 
--------------
-### Account
+Account
+-------
   And an account management for the money of each project.
+  
+  
+
+License
+-------
+[MIT](http://firebase.mit-license.org).
   
 
